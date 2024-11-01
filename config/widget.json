@@ -1,0 +1,1428 @@
+{
+    "id": "564c926109c7e2b33a8b4567",
+    "category": "video",
+    "content": [
+        {
+            "label": "Nature",
+            "value": "1",
+            "content": [
+                {
+                    "id": "demo-1",
+                    "order": "1",
+                    "path": "https:\/\/widgetic.com\/assets\/widgets\/demo\/Videos\/Ladybug.mp4",
+                    "image": "https:\/\/widgetic.com\/assets\/widgets\/demo\/Videos\/Ladybug.jpg"
+                }
+            ]
+        },
+        {
+            "label": "Nature 2",
+            "value": "2",
+            "content": [
+                {
+                    "id": "demo-2",
+                    "order": "2",
+                    "path": "https:\/\/widgetic.com\/assets\/widgets\/demo\/Videos\/Ladybug.mp4",
+                    "image": "https:\/\/widgetic.com\/assets\/widgets\/demo\/Videos\/Ladybug.jpg"
+                }
+            ]
+        }
+    ],
+    "contentMeta": {
+        "options": {
+            "max": 500,
+            "min": 1,
+            "free_user_limit": 1,
+            "notification": {
+                "min": "Please add at least one item!",
+                "max": "You reached the maximum number of items."
+            },
+            "mainAttribute": "path",
+            "preview": "core\/controls\/video\/preview"
+        },
+        "browser": {
+            "options": {
+                "types": [
+                    "video"
+                ],
+                "attribute": "path"
+            },
+            "sources": {
+                "blogvio": {
+                    "browser": "browser\/controller\/blogvio",
+                    "module": "editor\/content\/service\/blogvio"
+                },
+                "dropbox": {
+                    "module": "editor\/content\/service\/dropbox"
+                },
+                "google-drive": {
+                    "module": "editor\/content\/service\/google-drive"
+                },
+                "facebook": {
+                    "module": "editor\/content\/service\/facebook"
+                },
+                "instagram": {
+                    "module": "editor\/content\/service\/instagram"
+                },
+                "flickr": {
+                    "module": "editor\/content\/service\/flickr"
+                }
+            }
+        },
+        "input": {
+            "attribute": "path",
+            "control": "core\/controls\/video",
+            "options": {
+                "help_text": "",
+                "placeholder": "Add URL to YouTube or video file (mp4)",
+                "preview": true
+            }
+        },
+        "attributes": {
+            "path": {
+                "control": "core\/controls\/video",
+                "options": {
+                    "help_text": "Select the video file.",
+                    "label": "Video",
+                    "placeholder": "Select the video file.",
+                    "readonly": true,
+                    "preview": true
+                }
+            },
+            "image": {
+                "control": "core\/controls\/browser",
+                "options": {
+                    "label": "Preview Image",
+                    "help_text": "Select the preview image.",
+                    "editable": true,
+                    "input": {
+                        "control": "core\/controls\/image",
+                        "options": {
+                            "placeholder": "Add URL to image file (jpg, jpeg, png, gif)",
+                            "preview": true
+                        }
+                    },
+                    "browser": {
+                        "options": {
+                            "types": [
+                                "image"
+                            ]
+                        },
+                        "sources": {
+                            "dropbox": {
+                                "module": "editor\/content\/service\/dropbox"
+                            },
+                            "google-drive": {
+                                "module": "editor\/content\/service\/google-drive"
+                            },
+                            "facebook": {
+                                "module": "editor\/content\/service\/facebook"
+                            },
+                            "instagram": {
+                                "module": "editor\/content\/service\/instagram"
+                            },
+                            "flickr": {
+                                "module": "editor\/content\/service\/flickr"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "description": "Play YouTube or video files on your site",
+    "module": "basic-video-widget",
+    "name": "Video Player",
+    "previews": {
+        "full": "\/assets\/uploads\/widgets\/previews\/video_player_ng2_large.jpg",
+        "large": "\/assets\/uploads\/widgets\/previews\/video_player_ng2_large.jpg",
+        "small": "\/assets\/uploads\/widgets\/previews\/video_player_ng2_small.jpg"
+    },
+    "short_description": "Play YouTube or video files on your site",
+    "skinMeta": {
+        "colorAttributes": [
+            "previewIconColor",
+            "previewFillColor",
+            "playedProgressBarColor"
+        ],
+        "tabs": {
+            "Interface": {
+                "widgetBackgroundColor": {
+                    "control": "core\/controls\/color",
+                    "options": {
+                        "help_text": "Select the color and transparency for the widget's background.",
+                        "label": "Background Color",
+                        "default": "#ffffff"
+                    }
+                },
+                "videoSize": {
+                    "control": "core\/controls\/toggle",
+                    "options": {
+                        "help_text": "If with navigation is selected, the video will scale below the navigation to fit the entire widget height.",
+                        "label": "Video Size",
+                        "values_labels": {
+                            "true": "With navigation",
+                            "false": "Without navigation"
+                        },
+                        "default": true
+                    }
+                },
+                "progressPosition": {
+                    "control": "core\/controls\/toggle",
+                    "options": {
+                        "help_text": "If top, the progress bar is positioned on top of the navigation.",
+                        "label": "Progress Position",
+                        "values_labels": {
+                            "true": "Top",
+                            "false": "Bottom"
+                        },
+                        "default": true
+                    }
+                }
+            },
+            "Button": {
+                "previewButtonSize": {
+                    "control": "core\/controls\/slider",
+                    "options": {
+                        "help_text": "Set the button size.",
+                        "label": "Button Size",
+                        "default": "30",
+                        "unit": " %",
+                        "min": 0,
+                        "max": 100
+                    }
+                },
+                "previewButtonRadius": {
+                    "control": "core\/controls\/slider",
+                    "options": {
+                        "help_text": "Set the button's shape by changing it\u2019s radius.",
+                        "label": "Button Radius",
+                        "default": "10",
+                        "unit": " %",
+                        "min": 0,
+                        "max": 100
+                    }
+                },
+                "previewStrokeThickness": {
+                    "control": "core\/controls\/stepper",
+                    "options": {
+                        "help_text": "Select the thickness for the stroke.",
+                        "label": "Stroke Thickness",
+                        "default": 0,
+                        "unit": " px",
+                        "min": 0,
+                        "max": 50
+                    }
+                },
+                "previewIconSize": {
+                    "control": "core\/controls\/slider",
+                    "options": {
+                        "help_text": "Set the symbol size based on the button size.",
+                        "label": "Symbol Size",
+                        "default": "50",
+                        "unit": " %",
+                        "min": 0,
+                        "max": 100
+                    }
+                },
+                "previewIconColor": {
+                    "control": "core\/controls\/color",
+                    "options": {
+                        "help_text": "Select the color and transparency for the button\u2019s symbol.",
+                        "label": "Symbol Color",
+                        "default": "#fff"
+                    }
+                },
+                "previewIconHoverColor": {
+                    "control": "core\/controls\/color",
+                    "options": {
+                        "help_text": "Select the color and transparency for the symbol's, on mouse hover.",
+                        "label": "Symbol Hover Color",
+                        "default": "#000"
+                    }
+                },
+                "previewFillColor": {
+                    "control": "core\/controls\/color",
+                    "options": {
+                        "help_text": "Select the color and transparency for the button's fill.",
+                        "label": "Fill Color",
+                        "default": "#000"
+                    }
+                },
+                "previewFillHoverColor": {
+                    "control": "core\/controls\/color",
+                    "options": {
+                        "help_text": "Select the color and transparency for the button's fill, on mouse hover.",
+                        "label": "Fill Hover Color",
+                        "default": "#fff"
+                    }
+                },
+                "previewStrokeColor": {
+                    "control": "core\/controls\/color",
+                    "options": {
+                        "help_text": "Select the color and transparency for the button's stroke.",
+                        "label": "Stroke Color",
+                        "default": "#fff"
+                    }
+                },
+                "previewStrokeHoverColor": {
+                    "control": "core\/controls\/color",
+                    "options": {
+                        "help_text": "Select the color and transparency for the button's stroke, on mouse hover.",
+                        "label": "Stroke Hover Color",
+                        "default": "#fff"
+                    }
+                }
+            },
+            "Navigation": {
+                "navigationHeight": {
+                    "control": "core\/controls\/stepper",
+                    "options": {
+                        "help_text": "Set the navigation's height.",
+                        "label": "Navigation Height",
+                        "default": 10,
+                        "unit": " px",
+                        "min": 0,
+                        "max": 100
+                    }
+                },
+                "navigationColor": {
+                    "control": "core\/controls\/color",
+                    "options": {
+                        "help_text": "Select the color and transparency for the navigation.",
+                        "label": "Navigation Color",
+                        "default": "#fff"
+                    }
+                },
+                "timerColor": {
+                    "control": "core\/controls\/color",
+                    "options": {
+                        "help_text": "Select the color and transparency for the timer.",
+                        "label": "Timer Color",
+                        "default": "#ffffff"
+                    }
+                },
+                "timerFontStyle": {
+                    "control": "core\/controls\/font",
+                    "options": {
+                        "help_text": "Set the font style for the timer text.",
+                        "label": "Timer Font Style",
+                        "family": "Roboto",
+                        "style": "regular",
+                        "size": {
+                            "default": 13,
+                            "unit": " px",
+                            "min": 10,
+                            "max": 60
+                        }
+                    }
+                },
+                "distanceBetweenButtons": {
+                    "control": "core\/controls\/stepper",
+                    "options": {
+                        "help_text": "Set the distance between the buttons.",
+                        "label": "Distance Between Buttons",
+                        "default": 0,
+                        "unit": " px",
+                        "min": 0,
+                        "max": 20
+                    }
+                },
+                "navigationPadding": {
+                    "control": "core\/controls\/slider",
+                    "options": {
+                        "help_text": "Add a padding between the margin of widget and the navigation.",
+                        "label": "Navigation Padding",
+                        "default": "0",
+                        "unit": " px",
+                        "min": 0,
+                        "max": 50
+                    }
+                },
+                "buttonSize": {
+                    "control": "core\/controls\/slider",
+                    "options": {
+                        "help_text": "Set the button size.",
+                        "label": "Button Size",
+                        "default": "30",
+                        "unit": " %",
+                        "min": 0,
+                        "max": 100
+                    }
+                },
+                "buttonRadius": {
+                    "control": "core\/controls\/slider",
+                    "options": {
+                        "help_text": "Set the button's shape by changing it\u2019s radius.",
+                        "label": "Button Radius",
+                        "default": "10",
+                        "unit": " %",
+                        "min": 0,
+                        "max": 100
+                    }
+                },
+                "strokeThickness": {
+                    "control": "core\/controls\/stepper",
+                    "options": {
+                        "help_text": "Select the thickness for the stroke.",
+                        "label": "Stroke Thickness",
+                        "default": 0,
+                        "unit": " px",
+                        "min": 0,
+                        "max": 15
+                    }
+                },
+                "iconSize": {
+                    "control": "core\/controls\/slider",
+                    "options": {
+                        "help_text": "Set the symbol size based on the button size.",
+                        "label": "Symbol Size",
+                        "default": "50",
+                        "unit": " %",
+                        "min": 10,
+                        "max": 100
+                    }
+                },
+                "iconColor": {
+                    "control": "core\/controls\/color",
+                    "options": {
+                        "help_text": "Select the color and transparency for the button\u2019s symbol.",
+                        "label": "Symbol Color",
+                        "default": "#fff"
+                    }
+                },
+                "iconHoverColor": {
+                    "control": "core\/controls\/color",
+                    "options": {
+                        "help_text": "Select the color and transparency for the button\u2019s symbol, on mouse hover.",
+                        "label": "Symbol Hover Color",
+                        "default": "#000"
+                    }
+                },
+                "fillColor": {
+                    "control": "core\/controls\/color",
+                    "options": {
+                        "help_text": "Select the color and transparency for the button's fill.",
+                        "label": "Fill Color",
+                        "default": "#000"
+                    }
+                },
+                "fillHoverColor": {
+                    "control": "core\/controls\/color",
+                    "options": {
+                        "help_text": "Select the color and transparency for the button's fill, on mouse hover.",
+                        "label": "Fill Hover Color",
+                        "default": "#fff"
+                    }
+                },
+                "strokeColor": {
+                    "control": "core\/controls\/color",
+                    "options": {
+                        "help_text": "Select the color and transparency for the button's stroke.",
+                        "label": "Stroke Color",
+                        "default": "#fff"
+                    }
+                },
+                "strokeHoverColor": {
+                    "control": "core\/controls\/color",
+                    "options": {
+                        "help_text": "Select the color and transparency for the button's stroke, on mouse hover.",
+                        "label": "Stroke Hover Color",
+                        "default": "#fff"
+                    }
+                }
+            },
+            "Progress": {
+                "progressBarHeight": {
+                    "control": "core\/controls\/stepper",
+                    "access": 1,
+                    "options": {
+                        "help_text": "Set the progress bar\u2019s height.",
+                        "label": "Progress Bar Height",
+                        "default": 1,
+                        "unit": " px",
+                        "min": 0,
+                        "max": 100
+                    }
+                },
+                "progressColor": {
+                    "control": "core\/controls\/color",
+                    "options": {
+                        "help_text": "Select the color and transparency for the progress bar.",
+                        "label": "Progress Color",
+                        "default": "#fff"
+                    }
+                },
+                "playedProgressBarColor": {
+                    "control": "core\/controls\/color",
+                    "options": {
+                        "help_text": "Select the color and transparency for the played progress bar.",
+                        "label": "Played Progress Bar Color",
+                        "default": "#fff"
+                    }
+                },
+                "bufferedProgressBarColor": {
+                    "control": "core\/controls\/color",
+                    "options": {
+                        "help_text": "Select the color and transparency for the progress bar's buffer.",
+                        "label": "Buffered Progress Bar Color",
+                        "default": "#fff"
+                    }
+                },
+                "scrubThickness": {
+                    "control": "core\/controls\/stepper",
+                    "access": 1,
+                    "options": {
+                        "help_text": "Set the scrub thickness.",
+                        "label": "Scrub Thickness",
+                        "default": 1,
+                        "unit": " px",
+                        "min": 0,
+                        "max": 50
+                    }
+                },
+                "scrubHeight": {
+                    "control": "core\/controls\/stepper",
+                    "access": 1,
+                    "options": {
+                        "help_text": "Set the scrub height.",
+                        "label": "Scrub Height",
+                        "default": 1,
+                        "unit": " px",
+                        "min": 0,
+                        "max": 50
+                    }
+                },
+                "scrubRadius": {
+                    "control": "core\/controls\/slider",
+                    "access": 1,
+                    "options": {
+                        "help_text": "Set the scrub's radius.",
+                        "label": "Scrub Radius",
+                        "default": 0,
+                        "unit": " %",
+                        "min": 0,
+                        "max": 100
+                    }
+                },
+                "scrubColor": {
+                    "control": "core\/controls\/color",
+                    "options": {
+                        "help_text": "Select the color and transparency for the scrub.",
+                        "label": "Scrub Color",
+                        "default": "#fff"
+                    }
+                },
+                "scrubHoverColor": {
+                    "control": "core\/controls\/color",
+                    "options": {
+                        "help_text": "Select the color and transparency for the scrub,  on mouse hover.",
+                        "label": "Scrub Hover Color",
+                        "default": "#fff"
+                    }
+                }
+            },
+            "Playback": {
+                "autoplay": {
+                    "control": "core\/controls\/toggle",
+                    "access": 1,
+                    "options": {
+                        "help_text": "If true, the video starts automatically when the player loads (doesn\u2019t work on iOS).",
+                        "label": "Autostart Player",
+                        "values_labels": {
+                            "true": "True",
+                            "false": "False"
+                        },
+                        "default": false
+                    }
+                },
+                "loop": {
+                    "control": "core\/controls\/toggle",
+                    "access": 1,
+                    "options": {
+                        "help_text": "If true, when reaching the end, the playlist starts over again.",
+                        "label": "Loop Video \/ Playlist",
+                        "values_labels": {
+                            "true": "True",
+                            "false": "False"
+                        },
+                        "default": false
+                    }
+                },
+                "shuffle": {
+                    "control": "core\/controls\/toggle",
+                    "access": 1,
+                    "options": {
+                        "help_text": "If true, the songs will play in a random order.",
+                        "label": "Shuffle Playlist",
+                        "values_labels": {
+                            "true": "True",
+                            "false": "False"
+                        },
+                        "default": false
+                    }
+                }
+            }
+        }
+    },
+    "skins": [
+        {
+            "name": "Toggle Button",
+            "widget_id": "564c926109c7e2b33a8b4567",
+            "videoSize": true,
+            "progressPosition": true,
+            "widgetBackgroundColor": "rgb(0, 0, 0)",
+            "previewButtonSize": "22",
+            "previewButtonRadius": 100,
+            "previewStrokeThickness": 0,
+            "previewIconSize": 60.849056603774,
+            "previewIconColor": "rgb(255, 255, 255)",
+            "previewIconHoverColor": "rgba(255, 255, 255, 0.95)",
+            "previewFillColor": "rgb(0, 0, 0)",
+            "previewFillHoverColor": "rgb(0, 0, 0)",
+            "previewStrokeColor": "rgba(255, 255, 255, 0)",
+            "previewStrokeHoverColor": "rgb(0, 0, 0)",
+            "navigationHeight": 0,
+            "navigationColor": "rgb(61, 61, 61)",
+            "timerColor": "#ffffff",
+            "timerFontStyle": {
+                "family": "Arial",
+                "size": 16,
+                "style": "regular",
+                "source": "local",
+                "category": "sans-serif"
+            },
+            "distanceBetweenButtons": 0,
+            "navigationPadding": "0",
+            "buttonSize": 60.943396226415,
+            "buttonRadius": "10",
+            "strokeThickness": 0,
+            "iconSize": "50",
+            "iconColor": "#fff",
+            "iconHoverColor": "#000",
+            "fillColor": "#000",
+            "fillHoverColor": "#fff",
+            "strokeColor": "#fff",
+            "strokeHoverColor": "#fff",
+            "progressBarHeight": 0,
+            "progressColor": "#fff",
+            "playedProgressBarColor": "rgb(255, 115, 38)",
+            "bufferedProgressBarColor": "rgb(159, 255, 106)",
+            "scrubThickness": 0,
+            "scrubHeight": 0,
+            "scrubRadius": 0,
+            "scrubColor": "rgb(255, 254, 252)",
+            "scrubHoverColor": "#fff",
+            "autoplay": false,
+            "loop": false,
+            "shuffle": false,
+            "id": "p-1_564c926109c7e2b33a8b4567"
+        },
+        {
+            "name": "Toggle with Progress",
+            "widget_id": "564c926109c7e2b33a8b4567",
+            "videoSize": true,
+            "progressPosition": true,
+            "widgetBackgroundColor": "rgb(0, 0, 0)",
+            "previewButtonSize": "20",
+            "previewButtonRadius": 0,
+            "previewStrokeThickness": 2,
+            "previewIconSize": 20.283018867925,
+            "previewIconColor": "rgb(255, 255, 255)",
+            "previewIconHoverColor": "rgb(255, 255, 255)",
+            "previewFillColor": "rgba(0, 0, 0, 0)",
+            "previewFillHoverColor": "rgba(0, 0, 0, 0.15)",
+            "previewStrokeColor": "rgba(255, 255, 255, 0.99)",
+            "previewStrokeHoverColor": "rgb(255, 255, 255)",
+            "navigationHeight": 0,
+            "navigationColor": "rgb(61, 61, 61)",
+            "timerColor": "#ffffff",
+            "timerFontStyle": {
+                "family": "Arial",
+                "size": 16,
+                "style": "regular",
+                "source": "local",
+                "category": "sans-serif"
+            },
+            "distanceBetweenButtons": 0,
+            "navigationPadding": 0,
+            "buttonSize": 60.943396226415,
+            "buttonRadius": "10",
+            "strokeThickness": 0,
+            "iconSize": "50",
+            "iconColor": "#fff",
+            "iconHoverColor": "#000",
+            "fillColor": "#000",
+            "fillHoverColor": "#fff",
+            "strokeColor": "#fff",
+            "strokeHoverColor": "#fff",
+            "progressBarHeight": 5,
+            "progressColor": "#fff",
+            "playedProgressBarColor": "rgb(0, 0, 0)",
+            "bufferedProgressBarColor": "rgb(255, 255, 255)",
+            "scrubThickness": 0,
+            "scrubHeight": 0,
+            "scrubRadius": 0,
+            "scrubColor": "rgb(255, 254, 252)",
+            "scrubHoverColor": "#fff",
+            "autoplay": false,
+            "loop": false,
+            "shuffle": false,
+            "id": "p-2_564c926109c7e2b33a8b4567"
+        },
+        {
+            "name": "Stroke Navigation",
+            "widget_id": "564c926109c7e2b33a8b4567",
+            "videoSize": true,
+            "progressPosition": false,
+            "widgetBackgroundColor": "rgb(0, 0, 0)",
+            "previewButtonSize": 0,
+            "previewButtonRadius": 100,
+            "previewStrokeThickness": 0,
+            "previewIconSize": 47.641509433962,
+            "previewIconColor": "rgba(211, 211, 211, 0.5)",
+            "previewIconHoverColor": "rgba(255, 255, 255, 0.5)",
+            "previewFillColor": "rgba(255, 255, 255, 0)",
+            "previewFillHoverColor": "rgba(255, 255, 255, 0.1)",
+            "previewStrokeColor": "rgba(211, 211, 211, 0.5)",
+            "previewStrokeHoverColor": "rgba(211, 211, 211, 0.5)",
+            "navigationHeight": 58,
+            "navigationColor": "rgba(0, 0, 0, 0)",
+            "timerColor": "rgb(255, 255, 255)",
+            "timerFontStyle": {
+                "family": "Inconsolata",
+                "size": 24,
+                "style": "regular",
+                "source": "google",
+                "category": "monospace"
+            },
+            "distanceBetweenButtons": 6,
+            "navigationPadding": 6.1320754716981,
+            "buttonSize": 81.132075471698,
+            "buttonRadius": 0,
+            "strokeThickness": 2,
+            "iconSize": 49.481132075472,
+            "iconColor": "rgb(255, 255, 255)",
+            "iconHoverColor": "rgb(255, 255, 255)",
+            "fillColor": "rgba(94, 36, 182, 0)",
+            "fillHoverColor": "rgba(0, 0, 0, 0.15)",
+            "strokeColor": "#fff",
+            "strokeHoverColor": "rgb(255, 255, 255)",
+            "progressBarHeight": 0,
+            "progressColor": "#fff",
+            "playedProgressBarColor": "rgb(17, 35, 192)",
+            "bufferedProgressBarColor": "rgb(49, 49, 48)",
+            "scrubThickness": 0,
+            "scrubHeight": 0,
+            "scrubRadius": 100,
+            "scrubColor": "rgb(137, 134, 133)",
+            "scrubHoverColor": "rgb(137, 134, 133)",
+            "autoplay": false,
+            "loop": false,
+            "shuffle": false,
+            "id": "p-3_564c926109c7e2b33a8b4567"
+        },
+        {
+            "name": "Toggle with Timer",
+            "widget_id": "564c926109c7e2b33a8b4567",
+            "videoSize": true,
+            "progressPosition": true,
+            "widgetBackgroundColor": "rgb(0, 0, 0)",
+            "previewButtonSize": "27",
+            "previewButtonRadius": 100,
+            "previewStrokeThickness": 0,
+            "previewIconSize": 45.283018867925,
+            "previewIconColor": "rgb(255, 255, 255)",
+            "previewIconHoverColor": "rgb(255, 255, 255)",
+            "previewFillColor": "rgba(0, 0, 0, 0.6)",
+            "previewFillHoverColor": "rgba(0, 0, 0, 0.65)",
+            "previewStrokeColor": "rgba(255, 255, 255, 0)",
+            "previewStrokeHoverColor": "rgb(0, 0, 0)",
+            "navigationHeight": 23,
+            "navigationColor": "rgba(255, 255, 255, 0)",
+            "timerColor": "rgba(255, 255, 255, 0.82)",
+            "timerFontStyle": {
+                "family": "Verdana",
+                "size": 15,
+                "style": "regular",
+                "source": "local",
+                "category": "sans-serif"
+            },
+            "distanceBetweenButtons": 0,
+            "navigationPadding": 4.7169811320755,
+            "buttonSize": 0,
+            "buttonRadius": "10",
+            "strokeThickness": 0,
+            "iconSize": "50",
+            "iconColor": "#fff",
+            "iconHoverColor": "#000",
+            "fillColor": "#000",
+            "fillHoverColor": "#fff",
+            "strokeColor": "#fff",
+            "strokeHoverColor": "#fff",
+            "progressBarHeight": 0,
+            "progressColor": "#fff",
+            "playedProgressBarColor": "rgb(255, 115, 38)",
+            "bufferedProgressBarColor": "rgb(159, 255, 106)",
+            "scrubThickness": 0,
+            "scrubHeight": 0,
+            "scrubRadius": 0,
+            "scrubColor": "rgb(255, 254, 252)",
+            "scrubHoverColor": "#fff",
+            "autoplay": false,
+            "loop": false,
+            "shuffle": false,
+            "id": "p-4_564c926109c7e2b33a8b4567"
+        },
+        {
+            "name": "Navigation",
+            "widget_id": "564c926109c7e2b33a8b4567",
+            "videoSize": false,
+            "progressPosition": true,
+            "widgetBackgroundColor": "rgb(0, 0, 0)",
+            "previewButtonSize": "20",
+            "previewButtonRadius": 100,
+            "previewStrokeThickness": 0,
+            "previewIconSize": 47.641509433962,
+            "previewIconColor": "rgb(90, 90, 90)",
+            "previewIconHoverColor": "rgb(90, 90, 90)",
+            "previewFillColor": "rgba(255, 255, 255, 0.83)",
+            "previewFillHoverColor": "rgba(255, 255, 255, 0.9)",
+            "previewStrokeColor": "rgba(255, 255, 255, 0)",
+            "previewStrokeHoverColor": "rgb(0, 0, 0)",
+            "navigationHeight": 45,
+            "navigationColor": "rgb(255, 255, 255)",
+            "timerColor": "rgb(51, 51, 51)",
+            "timerFontStyle": {
+                "family": "Arial",
+                "size": 20,
+                "style": "regular",
+                "source": "local",
+                "category": "sans-serif"
+            },
+            "distanceBetweenButtons": 10,
+            "navigationPadding": 10.61320754717,
+            "buttonSize": 100,
+            "buttonRadius": "10",
+            "strokeThickness": 0,
+            "iconSize": 57.122641509434,
+            "iconColor": "rgb(90, 90, 90)",
+            "iconHoverColor": "rgb(90, 90, 90)",
+            "fillColor": "rgb(255, 255, 255)",
+            "fillHoverColor": "#fff",
+            "strokeColor": "#fff",
+            "strokeHoverColor": "#fff",
+            "progressBarHeight": 5,
+            "progressColor": "#fff",
+            "playedProgressBarColor": "rgb(63, 138, 241)",
+            "bufferedProgressBarColor": "rgb(159, 159, 159)",
+            "scrubThickness": 25,
+            "scrubHeight": 25,
+            "scrubRadius": 100,
+            "scrubColor": "rgb(63, 138, 241)",
+            "scrubHoverColor": "rgb(63, 138, 241)",
+            "autoplay": false,
+            "loop": false,
+            "shuffle": false,
+            "id": "p-5_564c926109c7e2b33a8b4567"
+        },
+        {
+            "name": "Transparent Navigation",
+            "widget_id": "564c926109c7e2b33a8b4567",
+            "videoSize": true,
+            "progressPosition": true,
+            "widgetBackgroundColor": "rgb(0, 0, 0)",
+            "previewButtonSize": "20",
+            "previewButtonRadius": 100,
+            "previewStrokeThickness": 5,
+            "previewIconSize": 47.641509433962,
+            "previewIconColor": "rgba(211, 211, 211, 0.5)",
+            "previewIconHoverColor": "rgba(255, 255, 255, 0.75)",
+            "previewFillColor": "rgba(255, 255, 255, 0)",
+            "previewFillHoverColor": "rgba(255, 255, 255, 0.1)",
+            "previewStrokeColor": "rgba(211, 211, 211, 0.5)",
+            "previewStrokeHoverColor": "rgba(211, 211, 211, 0.65)",
+            "navigationHeight": 35,
+            "navigationColor": "rgba(0, 0, 0, 0.2)",
+            "timerColor": "rgb(255, 255, 255)",
+            "timerFontStyle": {
+                "family": "Verdana",
+                "size": 14,
+                "style": "regular",
+                "source": "local",
+                "category": "sans-serif"
+            },
+            "distanceBetweenButtons": 0,
+            "navigationPadding": 2.5943396226415,
+            "buttonSize": 100,
+            "buttonRadius": "10",
+            "strokeThickness": 0,
+            "iconSize": 52.877358490566,
+            "iconColor": "rgb(137, 134, 133)",
+            "iconHoverColor": "rgb(137, 134, 133)",
+            "fillColor": "rgba(96, 94, 99, 0)",
+            "fillHoverColor": "rgba(105, 104, 106, 0)",
+            "strokeColor": "#fff",
+            "strokeHoverColor": "#fff",
+            "progressBarHeight": 5,
+            "progressColor": "#fff",
+            "playedProgressBarColor": "rgb(17, 35, 192)",
+            "bufferedProgressBarColor": "rgb(49, 49, 48)",
+            "scrubThickness": 10,
+            "scrubHeight": 10,
+            "scrubRadius": 100,
+            "scrubColor": "rgb(137, 134, 133)",
+            "scrubHoverColor": "rgb(137, 134, 133)",
+            "autoplay": false,
+            "loop": false,
+            "shuffle": false,
+            "id": "p-6_564c926109c7e2b33a8b4567"
+        },
+        {
+            "name": "No Timer",
+            "widget_id": "564c926109c7e2b33a8b4567",
+            "videoSize": false,
+            "progressPosition": false,
+            "widgetBackgroundColor": "rgb(0, 0, 0)",
+            "previewButtonSize": "20",
+            "previewButtonRadius": 100,
+            "previewStrokeThickness": 0,
+            "previewIconSize": 47.641509433962,
+            "previewIconColor": "rgb(90, 90, 90)",
+            "previewIconHoverColor": "rgb(90, 90, 90)",
+            "previewFillColor": "rgb(255, 255, 255)",
+            "previewFillHoverColor": "rgba(255, 255, 255, 0.85)",
+            "previewStrokeColor": "rgba(255, 255, 255, 0)",
+            "previewStrokeHoverColor": "rgb(0, 0, 0)",
+            "navigationHeight": 35,
+            "navigationColor": "rgb(84, 83, 89)",
+            "timerColor": "rgba(255, 255, 255, 0)",
+            "timerFontStyle": {
+                "family": "Arial",
+                "size": 15,
+                "style": "regular",
+                "source": "local",
+                "category": "sans-serif"
+            },
+            "distanceBetweenButtons": 0,
+            "navigationPadding": 0,
+            "buttonSize": 100,
+            "buttonRadius": 0,
+            "strokeThickness": 0,
+            "iconSize": 58.820754716981,
+            "iconColor": "rgb(255, 255, 255)",
+            "iconHoverColor": "rgb(255, 255, 255)",
+            "fillColor": "rgb(96, 94, 99)",
+            "fillHoverColor": "rgb(105, 104, 106)",
+            "strokeColor": "#fff",
+            "strokeHoverColor": "#fff",
+            "progressBarHeight": 5,
+            "progressColor": "#fff",
+            "playedProgressBarColor": "rgb(233, 123, 89)",
+            "bufferedProgressBarColor": "rgb(240, 148, 113)",
+            "scrubThickness": 0,
+            "scrubHeight": 0,
+            "scrubRadius": 100,
+            "scrubColor": "rgb(63, 138, 241)",
+            "scrubHoverColor": "rgb(63, 138, 241)",
+            "autoplay": false,
+            "loop": false,
+            "shuffle": false,
+            "id": "p-7_564c926109c7e2b33a8b4567"
+        },
+        {
+            "name": "Controllers",
+            "widget_id": "564c926109c7e2b33a8b4567",
+            "videoSize": true,
+            "progressPosition": false,
+            "widgetBackgroundColor": "rgb(0, 0, 0)",
+            "previewButtonSize": 0,
+            "previewButtonRadius": 100,
+            "previewStrokeThickness": 0,
+            "previewIconSize": 47.641509433962,
+            "previewIconColor": "rgba(211, 211, 211, 0.5)",
+            "previewIconHoverColor": "rgba(255, 255, 255, 0.5)",
+            "previewFillColor": "rgba(255, 255, 255, 0)",
+            "previewFillHoverColor": "rgba(255, 255, 255, 0.1)",
+            "previewStrokeColor": "rgba(211, 211, 211, 0.5)",
+            "previewStrokeHoverColor": "rgba(211, 211, 211, 0.5)",
+            "navigationHeight": 70,
+            "navigationColor": "rgba(0, 0, 0, 0)",
+            "timerColor": "rgba(255, 255, 255, 0)",
+            "timerFontStyle": {
+                "family": "Inconsolata",
+                "size": 24,
+                "style": "regular",
+                "source": "google",
+                "category": "monospace"
+            },
+            "distanceBetweenButtons": 6,
+            "navigationPadding": 6.1320754716981,
+            "buttonSize": 86.320754716981,
+            "buttonRadius": 100,
+            "strokeThickness": 0,
+            "iconSize": 42.688679245283,
+            "iconColor": "rgb(255, 255, 255)",
+            "iconHoverColor": "rgb(255, 255, 255)",
+            "fillColor": "rgb(170, 214, 109)",
+            "fillHoverColor": "rgb(144, 184, 90)",
+            "strokeColor": "rgba(125, 61, 222, 0.98)",
+            "strokeHoverColor": "rgba(125, 61, 222, 0.3)",
+            "progressBarHeight": 0,
+            "progressColor": "#fff",
+            "playedProgressBarColor": "rgb(255, 255, 255)",
+            "bufferedProgressBarColor": "rgb(49, 49, 48)",
+            "scrubThickness": 0,
+            "scrubHeight": 0,
+            "scrubRadius": 100,
+            "scrubColor": "rgb(137, 134, 133)",
+            "scrubHoverColor": "rgb(137, 134, 133)",
+            "autoplay": false,
+            "loop": false,
+            "shuffle": false,
+            "id": "p-8_564c926109c7e2b33a8b4567"
+        },
+        {
+            "name": "Play Symbol",
+            "widget_id": "564c926109c7e2b33a8b4567",
+            "videoSize": true,
+            "progressPosition": true,
+            "widgetBackgroundColor": "rgb(0, 0, 0)",
+            "previewButtonSize": "40",
+            "previewButtonRadius": 100,
+            "previewStrokeThickness": 0,
+            "previewIconSize": 100,
+            "previewIconColor": "rgb(255, 255, 255)",
+            "previewIconHoverColor": "rgba(255, 255, 255, 0.95)",
+            "previewFillColor": "rgba(0, 0, 0, 0)",
+            "previewFillHoverColor": "rgba(0, 0, 0, 0)",
+            "previewStrokeColor": "rgba(255, 255, 255, 0)",
+            "previewStrokeHoverColor": "rgb(0, 0, 0)",
+            "navigationHeight": 0,
+            "navigationColor": "rgb(61, 61, 61)",
+            "timerColor": "#ffffff",
+            "timerFontStyle": {
+                "family": "Arial",
+                "size": 16,
+                "style": "regular",
+                "source": "local",
+                "category": "sans-serif"
+            },
+            "distanceBetweenButtons": 0,
+            "navigationPadding": "0",
+            "buttonSize": 60.943396226415,
+            "buttonRadius": "10",
+            "strokeThickness": 0,
+            "iconSize": "50",
+            "iconColor": "#fff",
+            "iconHoverColor": "#000",
+            "fillColor": "#000",
+            "fillHoverColor": "#fff",
+            "strokeColor": "#fff",
+            "strokeHoverColor": "#fff",
+            "progressBarHeight": 0,
+            "progressColor": "#fff",
+            "playedProgressBarColor": "rgb(255, 115, 38)",
+            "bufferedProgressBarColor": "rgb(159, 255, 106)",
+            "scrubThickness": 0,
+            "scrubHeight": 0,
+            "scrubRadius": 0,
+            "scrubColor": "rgb(255, 254, 252)",
+            "scrubHoverColor": "#fff",
+            "autoplay": false,
+            "loop": false,
+            "shuffle": false,
+            "id": "p-9_564c926109c7e2b33a8b4567"
+        },
+        {
+            "name": "Standard Player",
+            "widget_id": "564c926109c7e2b33a8b4567",
+            "videoSize": false,
+            "progressPosition": true,
+            "widgetBackgroundColor": "rgb(0, 0, 0)",
+            "previewButtonSize": "20",
+            "previewButtonRadius": 22.169811320755,
+            "previewStrokeThickness": 0,
+            "previewIconSize": 32.075471698113,
+            "previewIconColor": "rgb(255, 255, 255)",
+            "previewIconHoverColor": "rgba(255, 255, 255, 0.95)",
+            "previewFillColor": "rgba(0, 0, 0, 0.7)",
+            "previewFillHoverColor": "rgba(0, 0, 0, 0.7)",
+            "previewStrokeColor": "rgb(0, 0, 0)",
+            "previewStrokeHoverColor": "rgb(0, 0, 0)",
+            "navigationHeight": 27,
+            "navigationColor": "rgb(2, 2, 2)",
+            "timerColor": "rgb(143, 143, 143)",
+            "timerFontStyle": {
+                "family": "Bitter",
+                "size": 11,
+                "style": "regular",
+                "source": "google",
+                "category": "serif"
+            },
+            "distanceBetweenButtons": 0,
+            "navigationPadding": "0",
+            "buttonSize": 100,
+            "buttonRadius": "10",
+            "strokeThickness": 0,
+            "iconSize": 60.943396226415,
+            "iconColor": "#fff",
+            "iconHoverColor": "rgb(255, 255, 255)",
+            "fillColor": "rgba(0, 0, 0, 0)",
+            "fillHoverColor": "rgba(0, 0, 0, 0)",
+            "strokeColor": "#fff",
+            "strokeHoverColor": "#fff",
+            "progressBarHeight": 5,
+            "progressColor": "#fff",
+            "playedProgressBarColor": "rgb(0, 101, 255)",
+            "bufferedProgressBarColor": "rgb(255, 255, 255)",
+            "scrubThickness": 7,
+            "scrubHeight": 4,
+            "scrubRadius": 0,
+            "scrubColor": "rgb(0, 0, 0)",
+            "scrubHoverColor": "rgb(0, 0, 0)",
+            "autoplay": false,
+            "loop": false,
+            "shuffle": false,
+            "id": "p-10_564c926109c7e2b33a8b4567"
+        },
+        {
+            "name": "Elegant Navigation",
+            "widget_id": "564c926109c7e2b33a8b4567",
+            "widgetBackgroundColor": "rgb(0, 0, 0)",
+            "videoSize": false,
+            "progressPosition": true,
+            "previewButtonSize": "19",
+            "previewButtonRadius": 18.867924528302,
+            "previewStrokeThickness": 3,
+            "previewIconSize": 60.849056603774,
+            "previewIconColor": "rgb(61, 61, 61)",
+            "previewIconHoverColor": "rgb(0, 0, 0)",
+            "previewFillColor": "#ffffff",
+            "previewFillHoverColor": "rgb(255, 255, 255)",
+            "previewStrokeColor": "rgb(105, 210, 231)",
+            "previewStrokeHoverColor": "rgb(105, 210, 231)",
+            "navigationHeight": 40,
+            "navigationColor": "rgb(61, 61, 61)",
+            "timerColor": "#ffffff",
+            "timerFontStyle": {
+                "family": "Arial",
+                "size": 16,
+                "style": "regular",
+                "source": "local",
+                "category": "sans-serif"
+            },
+            "distanceBetweenButtons": 10,
+            "navigationPadding": 10.377358490566,
+            "buttonSize": 61.792452830189,
+            "buttonRadius": "10",
+            "strokeThickness": 0,
+            "iconSize": 67.311320754717,
+            "iconColor": "#fff",
+            "iconHoverColor": "#000",
+            "fillColor": "#000",
+            "fillHoverColor": "#fff",
+            "strokeColor": "#fff",
+            "strokeHoverColor": "#fff",
+            "progressBarHeight": 7,
+            "progressColor": "#fff",
+            "playedProgressBarColor": "rgb(81, 140, 152)",
+            "bufferedProgressBarColor": "rgb(105, 210, 231)",
+            "scrubThickness": 10,
+            "scrubHeight": 10,
+            "scrubRadius": 0,
+            "scrubColor": "rgb(255, 254, 252)",
+            "scrubHoverColor": "#fff",
+            "autoplay": false,
+            "loop": false,
+            "shuffle": false,
+            "id": "p-11_564c926109c7e2b33a8b4567"
+        },
+        {
+            "name": "No Toggle",
+            "widget_id": "564c926109c7e2b33a8b4567",
+            "videoSize": false,
+            "progressPosition": true,
+            "widgetBackgroundColor": "rgb(0, 0, 0)",
+            "previewButtonSize": 0,
+            "previewButtonRadius": 100,
+            "previewStrokeThickness": 0,
+            "previewIconSize": 47.641509433962,
+            "previewIconColor": "rgb(90, 90, 90)",
+            "previewIconHoverColor": "rgb(90, 90, 90)",
+            "previewFillColor": "rgb(255, 255, 255)",
+            "previewFillHoverColor": "rgba(255, 255, 255, 0.85)",
+            "previewStrokeColor": "rgba(255, 255, 255, 0)",
+            "previewStrokeHoverColor": "rgb(0, 0, 0)",
+            "navigationHeight": 55,
+            "navigationColor": "rgb(17, 95, 100)",
+            "timerColor": "rgb(255, 255, 255)",
+            "timerFontStyle": {
+                "family": "Roboto Mono",
+                "size": 12,
+                "style": "100",
+                "source": "google",
+                "category": "monospace"
+            },
+            "distanceBetweenButtons": 10,
+            "navigationPadding": 10.377358490566,
+            "buttonSize": 65.566037735849,
+            "buttonRadius": 100,
+            "strokeThickness": 0,
+            "iconSize": 58.820754716981,
+            "iconColor": "rgb(17, 95, 100)",
+            "iconHoverColor": "rgb(17, 95, 100)",
+            "fillColor": "rgb(255, 255, 255)",
+            "fillHoverColor": "rgb(255, 255, 255)",
+            "strokeColor": "#fff",
+            "strokeHoverColor": "#fff",
+            "progressBarHeight": 7,
+            "progressColor": "rgb(11, 71, 73)",
+            "playedProgressBarColor": "rgb(181, 213, 86)",
+            "bufferedProgressBarColor": "rgb(11, 71, 73)",
+            "scrubThickness": 0,
+            "scrubHeight": 0,
+            "scrubRadius": 100,
+            "scrubColor": "rgb(63, 138, 241)",
+            "scrubHoverColor": "rgb(63, 138, 241)",
+            "autoplay": false,
+            "loop": false,
+            "shuffle": false,
+            "id": "p-12_564c926109c7e2b33a8b4567"
+        },
+        {
+            "name": "Playful",
+            "widget_id": "564c926109c7e2b33a8b4567",
+            "videoSize": true,
+            "progressPosition": true,
+            "widgetBackgroundColor": "rgb(0, 0, 0)",
+            "previewButtonSize": "20",
+            "previewButtonRadius": 71.22641509434,
+            "previewStrokeThickness": 0,
+            "previewIconSize": 60.849056603774,
+            "previewIconColor": "rgb(255, 255, 255)",
+            "previewIconHoverColor": "rgb(255, 255, 255)",
+            "previewFillColor": "rgb(241, 123, 65)",
+            "previewFillHoverColor": "rgb(215, 58, 67)",
+            "previewStrokeColor": "rgba(255, 255, 255, 0)",
+            "previewStrokeHoverColor": "rgb(0, 0, 0)",
+            "navigationHeight": 50,
+            "navigationColor": "rgba(61, 61, 61, 0.3)",
+            "timerColor": "rgb(255, 255, 255)",
+            "timerFontStyle": {
+                "family": "Verdana",
+                "size": 12,
+                "style": "regular",
+                "source": "local",
+                "category": "sans-serif"
+            },
+            "distanceBetweenButtons": 10,
+            "navigationPadding": 10.849056603774,
+            "buttonSize": 60.943396226415,
+            "buttonRadius": "10",
+            "strokeThickness": 0,
+            "iconSize": 45.235849056604,
+            "iconColor": "rgb(255, 255, 255)",
+            "iconHoverColor": "rgb(213, 212, 208)",
+            "fillColor": "rgba(0, 0, 0, 0)",
+            "fillHoverColor": "rgba(255, 255, 255, 0)",
+            "strokeColor": "#fff",
+            "strokeHoverColor": "#fff",
+            "progressBarHeight": 8,
+            "progressColor": "rgb(0, 0, 0)",
+            "playedProgressBarColor": "rgb(215, 58, 67)",
+            "bufferedProgressBarColor": "rgb(0, 0, 0)",
+            "scrubThickness": 0,
+            "scrubHeight": 0,
+            "scrubRadius": 0,
+            "scrubColor": "rgb(255, 254, 252)",
+            "scrubHoverColor": "#fff",
+            "autoplay": false,
+            "loop": false,
+            "shuffle": false,
+            "id": "p-13_564c926109c7e2b33a8b4567"
+        },
+        {
+            "name": "Minimalist Navigation",
+            "widget_id": "564c926109c7e2b33a8b4567",
+            "videoSize": true,
+            "progressPosition": false,
+            "widgetBackgroundColor": "rgb(0, 0, 0)",
+            "previewButtonSize": "20",
+            "previewButtonRadius": 71.22641509434,
+            "previewStrokeThickness": 0,
+            "previewIconSize": 60.849056603774,
+            "previewIconColor": "rgba(255, 255, 255, 0)",
+            "previewIconHoverColor": "rgb(217, 235, 255)",
+            "previewFillColor": "rgba(241, 123, 65, 0)",
+            "previewFillHoverColor": "rgba(215, 58, 67, 0)",
+            "previewStrokeColor": "rgba(255, 255, 255, 0)",
+            "previewStrokeHoverColor": "rgb(0, 0, 0)",
+            "navigationHeight": 50,
+            "navigationColor": "rgba(61, 61, 61, 0)",
+            "timerColor": "rgba(255, 255, 255, 0)",
+            "timerFontStyle": {
+                "family": "Verdana",
+                "size": 12,
+                "style": "regular",
+                "source": "local",
+                "category": "sans-serif"
+            },
+            "distanceBetweenButtons": 10,
+            "navigationPadding": 10.377358490566,
+            "buttonSize": 50,
+            "buttonRadius": "10",
+            "strokeThickness": 0,
+            "iconSize": 100,
+            "iconColor": "rgb(255, 255, 255)",
+            "iconHoverColor": "rgb(213, 212, 208)",
+            "fillColor": "rgba(0, 0, 0, 0)",
+            "fillHoverColor": "rgba(255, 255, 255, 0)",
+            "strokeColor": "#fff",
+            "strokeHoverColor": "#fff",
+            "progressBarHeight": 8,
+            "progressColor": "rgb(217, 235, 255)",
+            "playedProgressBarColor": "rgb(0, 131, 255)",
+            "bufferedProgressBarColor": "rgb(217, 235, 255)",
+            "scrubThickness": 0,
+            "scrubHeight": 0,
+            "scrubRadius": 0,
+            "scrubColor": "rgb(255, 254, 252)",
+            "scrubHoverColor": "#fff",
+            "autoplay": false,
+            "loop": false,
+            "shuffle": false,
+            "id": "p-14_564c926109c7e2b33a8b4567"
+        },
+        {
+            "name": "Translucent Bar",
+            "widget_id": "564c926109c7e2b33a8b4567",
+            "videoSize": true,
+            "progressPosition": true,
+            "widgetBackgroundColor": "rgb(0, 0, 0)",
+            "previewButtonSize": 0,
+            "previewButtonRadius": 71.22641509434,
+            "previewStrokeThickness": 0,
+            "previewIconSize": 60.849056603774,
+            "previewIconColor": "rgba(255, 255, 255, 0)",
+            "previewIconHoverColor": "rgb(217, 235, 255)",
+            "previewFillColor": "rgba(241, 123, 65, 0)",
+            "previewFillHoverColor": "rgba(215, 58, 67, 0)",
+            "previewStrokeColor": "rgba(255, 255, 255, 0)",
+            "previewStrokeHoverColor": "rgb(0, 0, 0)",
+            "navigationHeight": 54,
+            "navigationColor": "rgba(255, 255, 255, 0.25)",
+            "timerColor": "rgba(255, 255, 255, 0)",
+            "timerFontStyle": {
+                "family": "Verdana",
+                "size": 12,
+                "style": "regular",
+                "source": "local",
+                "category": "sans-serif"
+            },
+            "distanceBetweenButtons": 5,
+            "navigationPadding": 4.0094339622642,
+            "buttonSize": 85.849056603774,
+            "buttonRadius": "10",
+            "strokeThickness": 0,
+            "iconSize": 51.179245283019,
+            "iconColor": "rgb(44, 51, 57)",
+            "iconHoverColor": "rgb(44, 51, 57)",
+            "fillColor": "rgb(255, 255, 255)",
+            "fillHoverColor": "rgb(255, 255, 255)",
+            "strokeColor": "#fff",
+            "strokeHoverColor": "#fff",
+            "progressBarHeight": 0,
+            "progressColor": "rgb(217, 235, 255)",
+            "playedProgressBarColor": "rgb(0, 131, 255)",
+            "bufferedProgressBarColor": "rgb(217, 235, 255)",
+            "scrubThickness": 0,
+            "scrubHeight": 0,
+            "scrubRadius": 0,
+            "scrubColor": "rgb(255, 254, 252)",
+            "scrubHoverColor": "#fff",
+            "autoplay": false,
+            "loop": false,
+            "shuffle": false,
+            "id": "p-15_564c926109c7e2b33a8b4567"
+        },
+        {
+            "name": "Dark Theme",
+            "widget_id": "564c926109c7e2b33a8b4567",
+            "videoSize": false,
+            "progressPosition": true,
+            "widgetBackgroundColor": "rgb(0, 0, 0)",
+            "previewButtonSize": "20",
+            "previewButtonRadius": 100,
+            "previewStrokeThickness": 3,
+            "previewIconSize": 47.641509433962,
+            "previewIconColor": "rgb(65, 65, 65)",
+            "previewIconHoverColor": "rgb(248, 179, 0)",
+            "previewFillColor": "rgb(0, 0, 0)",
+            "previewFillHoverColor": "rgb(0, 0, 0)",
+            "previewStrokeColor": "rgb(65, 65, 65)",
+            "previewStrokeHoverColor": "rgb(65, 65, 65)",
+            "navigationHeight": 38,
+            "navigationColor": "rgb(0, 0, 0)",
+            "timerColor": "rgba(255, 255, 255, 0)",
+            "timerFontStyle": {
+                "family": "Arial",
+                "size": 15,
+                "style": "regular",
+                "source": "local",
+                "category": "sans-serif"
+            },
+            "distanceBetweenButtons": 3,
+            "navigationPadding": 3.0660377358491,
+            "buttonSize": 82.075471698113,
+            "buttonRadius": 49.056603773585,
+            "strokeThickness": 2,
+            "iconSize": 74.528301886792,
+            "iconColor": "rgb(24, 24, 24)",
+            "iconHoverColor": "rgb(24, 24, 24)",
+            "fillColor": "rgb(65, 65, 65)",
+            "fillHoverColor": "rgb(65, 65, 65)",
+            "strokeColor": "rgb(103, 103, 103)",
+            "strokeHoverColor": "rgb(103, 103, 103)",
+            "progressBarHeight": 5,
+            "progressColor": "rgb(47, 47, 47)",
+            "playedProgressBarColor": "rgb(255, 233, 0)",
+            "bufferedProgressBarColor": "rgb(47, 47, 47)",
+            "scrubThickness": 10,
+            "scrubHeight": 5,
+            "scrubRadius": 0,
+            "scrubColor": "rgb(248, 179, 0)",
+            "scrubHoverColor": "rgb(248, 179, 0)",
+            "autoplay": false,
+            "loop": false,
+            "shuffle": false,
+            "id": "p-16_564c926109c7e2b33a8b4567"
+        }
+    ],
+    "slug": "video-player",
+    "tags": [
+        "youtube",
+        "media",
+        "video",
+        "playback",
+        "player",
+        "playlist",
+        "shuffle",
+        "you tube",
+        "mp4",
+        "movie",
+        "film",
+        "cinema",
+        "cine",
+        "play",
+        "pause",
+        "loop",
+        "rewind",
+        "forward",
+        "motion",
+        "show",
+        "videotape"
+    ],
+    "width": 640,
+    "height": 360,
+    "version": "9711fdf"
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24" height="24" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon 128@1x</title>
+    <g id="Icon-128" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Background" fill="#0055FF" transform="translate(64.000000, 64.000000) rotate(180.000000) translate(-64.000000, -64.000000) " x="0" y="0" width="128" height="128" rx="10"></rect>
+        <g id="Icon" transform="translate(20.000000, 37.000000)" fill="#FFFFFF">
+            <path d="M84.045977,0 C86.2297236,-4.01147742e-16 88,1.77027639 88,3.95402299 L88,51.045977 C88,53.2297236 86.2297236,55 84.045977,55 L3.95402299,55 C1.77027639,55 -1.76657382e-16,53.2297236 0,51.045977 L0,3.95402299 C-7.11521038e-16,1.77027639 1.77027639,1.28932616e-15 3.95402299,0 L84.045977,0 Z M34,11 L34,43 L56,27.7619048 L34,11 Z"></path>
+        </g>
+    </g>
+</svg>

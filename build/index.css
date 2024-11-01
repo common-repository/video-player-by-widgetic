@@ -1,0 +1,549 @@
+/** 
+	THEME EDITOR
+ **/
+
+.components-panel__body.is-opened > .components-panel__body-title {
+  margin-bottom: -5px !important; 
+}
+
+/* GENERAL INPUT CONTROLLER */
+.ic-holder {
+  /* border-top: 1px solid; */
+}
+
+/* HEADER OF CONTROLS */
+/* label */
+.ic-holder > div > h4 {
+  font-size: 14px !important;
+  margin-top: 14px !important;
+  margin-bottom: 14px !important;
+}
+
+/* help icon */
+.ic-help-bt {
+  min-width: 20px !important;
+  max-height: 20px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.ic-help-bt:focus {
+  box-shadow: none !important;
+}
+.ic-help-bt > svg,
+.ic-help-bt > span {
+  margin: 0 !important;
+}
+
+/* UPGRADE CTA BT OF CONTROLS */
+.components-disabled {
+  opacity: 0.6;
+  /* background-color: var(--wp--preset--color--cyan-bluish-gray); */
+}
+.ic-upgrade-cta {
+  font-size: 14px !important;
+  color: var(--wp-admin-theme-color) !important;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* ATOM CONTROLLERS inside */
+/* INPUT CONTROL */
+.input-controller,
+.input-controller > .components-base-control__field > input,
+.input-controller > .components-base-control__field > textarea,
+.input-controller > .components-input-control__container > select,
+.components-text-control__input {
+  border-radius: 3px !important;
+}
+
+.input-controller,
+.components-base-control__field {
+  width: 100%;
+  margin-bottom: 0px !important;
+}
+
+.components-base-control__label {
+  white-space: nowrap;
+}
+
+/* SIZE CONTROL */
+.size-input {
+  width: 100%;
+}
+.size-input .components-base-control__field {
+  justify-content: flex-start !important;
+}
+.size-input .components-base-control__field .components-base-control__label {
+  width: auto;
+  margin-bottom: 0px;
+}
+.size-input .components-base-control__field .components-range-control__slider {
+  display: none;
+}
+.size-input .components-base-control__field .components-range-control__number {
+  width: auto;
+}
+
+/* COLOR PICKER CONTROL */
+/* color panel, hue slider, alpha slider width */
+.components-color-picker, 
+.components-color-picker > .react-colorful,
+.components-color-picker > .react-colorful > .react-colorful__hue,
+.components-color-picker > .react-colorful > .react-colorful__alpha,
+.components-color-picker > div > .components-input-control {
+  width: 100% !important;
+}
+/* hex begining read-only input */
+.components-color-picker > :nth-child(2) > :first-child > :first-child {
+  border: 1px solid;
+  padding-left: 8px;
+}
+/* RGB/HSL/HEX dropdown */
+.components-color-picker > div > .components-h-stack {
+  height: 30px !important;
+}
+.components-color-picker > div > .components-h-stack > .components-base-control {
+  width: 100%;
+  margin-bottom: 0px !important;
+}
+.components-color-picker > div > .components-h-stack > .components-base-control > .components-base-control__field > .components-select-control  {
+  width: 100%;
+  margin-left: 0px !important;
+}
+/* details inputs(RGB / HSL / HEX) */
+.components-color-picker > div > .components-h-stack > .components-number-control > .components-input-control__container {
+  align-items: baseline;
+}
+.components-color-picker > div > .components-h-stack > .components-number-control > .components-input-control__container > .components-input-control__input {
+  height: 30px;
+}
+.components-color-picker > div > .components-h-stack > .components-range-control {
+  height: 30px;
+}
+/* code input */
+.components-color-picker > div > .components-input-control {
+  height: 30px;
+}
+
+/* FONT COMPOSED CONTROL */
+/* Font Family Dropdown */
+.font-select {
+  width: 154px !important;
+  padding-left: 10px;
+  background: white;
+  border: 1px solid #7e8993;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.font-select > span {
+  height: 28px !important;
+
+  font-size: 14px !important;
+  line-height: 28px !important;
+
+  padding: 0 !important;
+  padding-right: 32px !important;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  border: none !important;
+  background-color: white !important;
+}
+.font-select > .fs-drop {
+  top: 30px !important;
+  border-color: #7e8993 !important;
+}
+/* Font Style Dropdown */
+.font-style-picker {
+  width: 90px !important;
+  margin: 0 !important;
+  margin-left: 1px !important;
+  border-radius: 3px !important;
+}
+.font-style-picker > .components-base-control__field > select {
+  margin: 0 !important;
+}
+/* Font Size Stepper */
+.font-size-stepper {
+  margin-left: 0px;
+}
+
+/* TOGGLE CONTROL */
+.toggle-option {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.toggle-option.is-primary {
+  pointer-events: none;
+  box-shadow: none !important;
+}
+
+.toggle-option:focus {
+  box-shadow: none !important;
+}
+
+/* DROPDOWN CONTROL */
+.input-controller > .components-input-control__container > select {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  line-height: normal !important;
+}
+
+/* TEXTAREA CONTROL */
+.components-textarea-control__input {
+  margin-bottom: -6px !important;
+}
+.font-select * {
+	box-sizing: border-box;
+}
+
+.font-select {
+	font-size: 16px;
+	width: 240px;
+	position: relative;
+	display: inline-block;
+}
+
+.font-select .fs-drop {
+	position: absolute;
+	top: 38px;
+	left: 0;
+	z-index: 999;
+	background: #fff;
+	color: #000;
+	width: 100%;
+	border: 1px solid #aaa;
+	border-top: 0;
+	box-shadow: 0 4px 5px rgba(0,0,0,.15);
+	border-radius: 0 0 4px 4px;
+}
+
+.font-select > span {
+	outline: 0;
+	border-radius: 0.25rem;
+	border: 1px solid #ced4da;
+	display: block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	height: 38px;
+	line-height: 32px;
+	padding: 3px 8px 3px 8px;
+	color: #444;
+	background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23303030' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.font-select-active > span {
+	background-color: #eee;
+	border-bottom-left-radius : 0;
+	border-bottom-right-radius: 0;
+}
+
+.font-select .fs-results {
+	max-height: 190px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	margin: 0;
+	padding: 0;
+}
+
+.font-select .fs-results li {
+	line-height: 80%;
+	padding: 8px;
+	margin: 0;
+	list-style: none;
+	font-size: 18px;
+	white-space: nowrap;
+}
+
+.font-select .fs-results li.active {
+	background-color: #3875d7;
+	color: #fff;
+	cursor: pointer;
+}
+
+.font-select .fs-search {
+	border-bottom: 1px solid #aaa;
+	padding: 4px;
+}
+
+.font-select .fs-search input {
+	padding: 7px;
+	width: 100%;
+	border: 1px solid #aaa;
+	font: 16px Helvetica, Sans-serif;
+	box-shadow: inset 0 1px 3px rgba(0,0,0,.06);
+	border-radius: .1875rem;
+}
+
+
+
+/** 
+	THEME SELECTOR POPOVER
+ **/
+
+@font-face {
+  font-family: SegoeUI;
+  src: local("Segoe UI"),
+    url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff2)
+      format("woff2"),
+    url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff)
+      format("woff"),
+    url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.ttf)
+      format("truetype");
+  font-weight: 400;
+}
+
+.themes-popover-container > .components-popover__content > div {
+  border: 1px solid #1e1e1e !important;
+}
+
+.grid {
+  margin: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+}
+
+.grid__item {
+  width: 174px;
+  height: 115px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: solid 2px #555d66;
+  cursor: pointer;
+}
+
+.grid__item:hover {
+  border-color: #191e23;
+}
+
+.grid__item.selected {
+  border-color: #00b37a;
+  pointer-events: none;
+}
+
+.grid-item-icon {
+  width: 100%;
+  height: 100% !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.grid-item-title {
+  margin-top: 15px;
+
+  font-family: SegoeUI;
+  font-size: 13px;
+  font-weight: 400;
+
+  color: #32373c;
+  text-align: center;
+}
+/* 
+ * .selected {
+ *
+ * }
+ */
+
+/** 
+	BLOCK TOOLBAR
+ **/
+
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+}
+
+.empty {
+	width: 36px;
+}
+
+.components-toolbar-group {
+	margin: 0 !important;
+}
+
+/* 
+	BLOCK CONTROLS 
+*/
+.block-editor-block-toolbar__block-controls {
+	margin: 0 !important;
+}
+
+/* block transform toggle bt */
+.block-editor-block-switcher {
+	/* display: none !important; */
+	/* border-right: 1px solid; */
+}
+
+/* block mover */
+.block-editor-block-mover {
+	/* border-left: 1px solid; */
+	height: 48px;
+	margin: 0 !important;
+}
+.block-editor-block-mover > button {
+	margin-right: 15px;
+}
+.block-editor-block-mover__move-button-container {
+	border-left: 1px solid !important;
+	padding-left: 3px !important;
+}
+
+/* 
+	WIDGET CONTROLS: align, themes, autoscale  
+*/
+.widget-toolbar {
+	border: none !important;
+	border-right: 1px solid !important;
+	border-radius: 0px !important;
+}
+
+.widget-toolbar > .empty {
+	display: none;
+}
+
+/* AUTOSCALE toggle bt */
+.widget-toolbar-bt {
+	width: 36px;
+	height: 36px;
+	padding: 3px;
+}
+
+.widget-toolbar-bt {
+	box-shadow: none !important;
+}
+.widget-toolbar-bt:hover {
+	/* color: #555d66 !important; */
+}
+
+.widget-toolbar-bt:focus:not(:disabled) {
+	box-shadow: none;
+	color: #555d66;
+}
+
+.toggled > svg {
+	background-color: #555d66 !important;
+	color: white !important;
+}
+
+.toggled:hover > svg {
+	box-shadow: none;
+}
+
+.widget-toolbar-bt:hover > svg {
+	/* box-shadow: inset 0 0 0 1px #555d66; */
+}
+
+.widget-toolbar-bt > svg {
+	width: 30px;
+	height: 30px;
+	padding: 5px;
+	margin: 0px !important;
+	border-radius: 4px;
+}
+
+/* THEMES dropdown */
+.block-editor-block-settings-menu,
+.widget-toolbar-dropdown {
+	padding: 0 !important;
+}
+
+.block-editor-block-settings-menu > button,
+.widget-toolbar-dropdown > button {
+	border: 3px solid transparent !important;
+	padding: 5px !important;
+}
+
+.widget-toolbar-dropdown > button:focus:not(:disabled) {
+	box-shadow: none;
+}
+
+.widget-toolbar-dropdown > button::after {
+	content: '';
+	pointer-events: none;
+	display: block;
+	width: 0;
+	height: 0;
+	border-left: 3px solid transparent;
+	border-right: 3px solid transparent;
+	border-top: 5px solid;
+	margin-left: 4px;
+	margin-right: 2px;
+}
+
+.widget-toolbar-dropdown > button > svg {
+	width: 20px;
+	height: 20px;
+	margin-right: 0px !important;
+}
+
+/** 
+	CONTENT EDITOR
+ **/
+
+/* HEADER */
+.content-editor-header {
+  border: 1px solid;
+  border-left: none;
+  border-right: none;
+}
+/* LIST */
+.content-list {
+  overflow-y: auto;
+  background-color: white;
+  height: 0px;
+}
+.content-list::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+.content-list::-webkit-scrollbar:vertical {
+  width: 11px;
+}
+.content-list::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid white; /* should match background, can't be transparent */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.content-list > div > div {
+  overflow: hidden;
+  margin-bottom: 0px !important;
+}
+
+.content-viewport, .content-item-header {
+  border-color: rgb(226, 228, 231) !important;
+}
+
+/* UPLOAD MEDIA CONTROL */
+.upload-image-preview, 
+.upload-plus-bt {
+  width: 28px !important;
+  height: 28px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  overflow: hidden !important;
+  border-radius: 3px !important;
+  border: 1px solid #7e8993 !important;
+}
+
+.upload-plus-bt {
+  width: 27px !important;
+  height: 26px !important;
+}
